@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Toaster position='top-right' toastOptions={{duration: 2000}}/>
+      <Toaster position='bottom-right' toastOptions={{duration: 2000}}/>
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path = '/login' element={<SignInForm />} />

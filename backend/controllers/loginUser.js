@@ -24,7 +24,6 @@ const loginUser = async (req, res) =>{
         //have to hash passwords and use helpers
 
         const dbPassword = userExists.password;
-        console.log("password" + dbPassword.password)
         if(dbPassword != password){
             return res.json({
                 error: "Wrong password entered"

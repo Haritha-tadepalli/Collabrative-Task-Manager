@@ -20,7 +20,7 @@ const SignInForm = () => {
     e.preventDefault();
     const {email, password} = data 
     try {
-        const response = await axios.post('/login', {
+        const response = await axios.post('http://localhost:8000/login', {
             email, password
         })
         if(response.error){
@@ -31,7 +31,8 @@ const SignInForm = () => {
             navigate('/')
         }
     } catch (error) {
-        
+        console.log(error)
+        toast.error("Error in Login, try later!!")
     }
   };
 

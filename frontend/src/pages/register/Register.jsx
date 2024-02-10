@@ -18,7 +18,7 @@ export default function Register() {
     e.preventDefault();
     const { name, email, password } = data;
     try {
-      const response = await axios.post('http://localhost:8000/require', {
+      const response = await axios.post('http://localhost:8000/register', {
         name, email, password
       });
       if (response.data.error) {
@@ -30,6 +30,7 @@ export default function Register() {
       }
     } catch (error) {
       console.log(error);
+      toast.error("Unable to create account, try agian later")
     }
   };
 
