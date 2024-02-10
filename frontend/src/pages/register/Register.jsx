@@ -18,11 +18,7 @@ export default function Register() {
     e.preventDefault();
     const { name, email, password } = data;
     try {
-<<<<<<< HEAD
-      const response = await axios.post('http://localhost:8000/register', {
-=======
       const response = await axios.post('/register', {
->>>>>>> 3908ac2b027cf10846de5c515c9862d63a544ba0
         name, email, password
       });
       if (response.data.error) {

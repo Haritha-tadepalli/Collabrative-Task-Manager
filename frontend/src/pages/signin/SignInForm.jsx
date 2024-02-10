@@ -20,7 +20,7 @@ const SignInForm = () => {
     e.preventDefault();
     const {email, password} = data 
     try {
-        const response = await axios.post('http://localhost:8000/login', {
+        const response = await axios.post('/login', {
             email, password
         })
         if(response.error){
