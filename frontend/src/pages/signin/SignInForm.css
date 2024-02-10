@@ -1,0 +1,36 @@
+.register-form {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+  }
+  
+  .register-form label {
+    font-weight: bold;
+  }
+  
+  .register-form input {
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+  }
+  
+  .register-form button {
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+  }
+  
+  .register-form button:hover {
+    background-color: #0056b3; 
+  }
+  section{
+    flex-direction: column;
+  }
+  
+  .signinLink{
+    font-size: 20px;
+    margin-top: 10px;
+  }

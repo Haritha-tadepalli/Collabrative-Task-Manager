@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import SignInForm from './pages/signin/SignInForm';
+import { Route, Routes } from 'react-router-dom';
+import NavBar from './componets/navBar/NavBar';
+import Register from './pages/register/Register';
+import Home from './pages/home/Home';
+import axios from 'axios';
+import { Toaster } from 'react-hot-toast';
+
+axios.defaults.baseURL = 'http://localhost:8000'
+axios.defaults.withCredentials = true;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <Toaster position='top-right' toastOptions={{duration: 2000}}/>
+      <Routes>
+        <Route path='/' element={<Home />}/>
+        <Route path = '/login' element={<SignInForm />} />
+        <Route path = '/register' element={<Register />} />
+      </Routes>
     </div>
   );
 }
